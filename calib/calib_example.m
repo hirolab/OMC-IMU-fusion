@@ -22,7 +22,8 @@ addpath(genpath("C:\Users\garamizo\Documents\GitHub\OMC_IMU_fusion"))
 % load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\calibration_files\031124\data\cable_driven_prosthesis_imu_enc.mat')
 % load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\State_Estimation\data\johnny\johnny_struct.mat')
 % load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\calibration_files\040524\data\cable_driven_prosthesis_imu_enc_europa.mat')
-load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\calibration_files\040524\data\cable_driven_prosthesis_imu.mat')
+% load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\calibration_files\040524\data\cable_driven_prosthesis_imu.mat')
+load('C:\Users\hiro\Documents\cdprosthesis-desktop\MATLAB\calibration_files\040524\data\cable_driven_prosthesis_041524.mat')
 
 i = 1;
 t = trial(1);
@@ -55,7 +56,7 @@ cal = Calibration_OMC_IMU(t.mtime, t.squat, t.strans,t.mstrans, t.packet.t_senso
 %                                                                  t.a2);
                                                              
 %           cal.trange_ = [25, 150];
-cal.trange_ = [10, 90];
+cal.trange_ = [10, 85];
 tic
 [cq1, cs1, cwbias1, cabias1, Tw1, Ta1, r1, g131, tshift1, ri1, x] = cal.calibrate_LM();
 [Tw1, r1]    
