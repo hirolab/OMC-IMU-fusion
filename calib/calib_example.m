@@ -56,7 +56,7 @@ cal = Calibration_OMC_IMU(t.mtime, t.squat, t.strans,t.mstrans, t.packet.t_senso
 %                                                                  t.a2);
                                                              
 %           cal.trange_ = [25, 150];
-cal.trange_ = [10, 85];
+cal.trange_ = [10, 90];
 tic
 [cq1, cs1, cwbias1, cabias1, Tw1, Ta1, r1, g131, tshift1, ri1, x] = cal.calibrate_LM();
 [Tw1, r1]    
